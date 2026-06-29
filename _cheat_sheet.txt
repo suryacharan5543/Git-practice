@@ -1,0 +1,55 @@
+GIT:
+====
+-> git is a version control system that helps to track the changes in the file.
+
+GITHUB:
+=======
+-> website that allows the developers to store and manage their code using git.
+
+GIT CONFIGURATION COMMANDS:
+===========================
+-> git config --global user.name "Y Surya Charan"
+   (sets your global commit name)
+
+-> git config --global user.email "suryacharan5543@gmail.com"
+   (Sets your global commit email)
+
+-> git config user.name
+   (Checks your current configured name)
+
+-> git config user.email
+   (Checks your current configured email)
+
+
+GIT FILE STATUS SYMBOLS:
+========================
+-> U (Untracked)   : A brand-new file you just created. Git sees it 
+                     but isn't watching its history yet.
+                   
+-> A (Added/staged): A new file that you ran 'git add' on. It is 
+                     staged and ready to be saved in your next commit.
+                   
+-> M (Modified)    : A file Git already tracks, but you have edited 
+                     or changed the text inside it.
+                   
+-> D (Deleted)     : A tracked file that you deleted. Git notices 
+                     it's missing and waits for your commit.
+
+
+GIT BASIC COMMANDS:
+===================
+-> git clone <repository-link>
+   (Copies an existing repository from GitHub down to your computer)
+
+-> git status
+   (Checks the current state of your folder; shows untracked or modified files)
+
+-> git add <filename>
+   (Stages a specific file, preparing it to be saved; changes status from U to A)
+
+-> git add .
+   (Stages ALL new, modified, and deleted files in the current folder at once)/
+   (adds all files-shortcut)
+
+-> git commit -m "your_message"
+   (Saves your staged snapshot permanently into Git's history with a short message)
