@@ -6,6 +6,11 @@ GITHUB:
 =======
 -> website that allows the developers to store and manage their code using git.
 
+==================
+LOCAL:our computer
+REMOTE:GitHub
+==================
+
 GIT CONFIGURATION COMMANDS:
 ===========================
 -> git config --global user.name "Y Surya Charan"
