@@ -1,7 +1,8 @@
+====
 GIT:
 ====
 -> git is a version control system that helps to track the changes in the file.
-
+=======
 GITHUB:
 =======
 -> website that allows the developers to store and manage their code using git.
@@ -11,6 +12,7 @@ LOCAL:our computer
 REMOTE:GitHub
 ==================
 
+===========================
 GIT CONFIGURATION COMMANDS:
 ===========================
 -> git config --global user.name "Y Surya Charan"
@@ -25,7 +27,7 @@ GIT CONFIGURATION COMMANDS:
 -> git config user.email
    (Checks your current configured email)
 
-
+========================
 GIT FILE STATUS SYMBOLS:
 ========================
 -> U (Untracked)   : A brand-new file you just created. Git sees it 
@@ -40,7 +42,10 @@ GIT FILE STATUS SYMBOLS:
 -> D (Deleted)     : A tracked file that you deleted. Git notices 
                      it's missing and waits for your commit.
 
+-> C (Conflict)
+   (A file with a merge conflict; happens when local and remote changes clash)
 
+===================
 GIT BASIC COMMANDS:
 ===================
 -> git clone <repository-link>
@@ -58,3 +63,74 @@ GIT BASIC COMMANDS:
 
 -> git commit -m "your_message"
    (Saves your staged snapshot permanently into Git's history with a short message)
+
+-> git push origin <branch-name>
+   (Uploads all your saved local commits from your computer up to GitHub)
+
+-> git pull origin <branch-name>
+   (Downloads the latest changes from GitHub down to your local computer)
+
+-> git init
+   (Initializes a brand new, empty local Git repository in your current folder)
+
+-> git remote add origin <URL>
+   (Links your local Git repository to your remote repository on GitHub using the nickname "origin")
+
+-> git branch
+   (Lists all the branches in your local repository and highlights the one you are currently on)
+
+-> git branch -m <new-name>
+   (Renames your current active branch to a new name, like renaming "master" to "main")
+
+-> git branch -v
+   (Lists your local branches vertically showing the latest commit message and ID for each)
+
+-> git push -u origin main
+   (Uploads commits to GitHub AND sets "main" as your default tracking branch for future shortcuts)
+
+===================
+    WORKFLOW      :
+===================
+Github repo
+    ↓
+  clone  (git clone <URL>)
+    ↓
+ changes (Edit your files)
+    ↓
+   add   (git add .)
+    ↓
+ commit  (git commit -m "...")
+    ↓
+  push   (git push)
+
+========================
+ GIT BRANCHING COMMANDS:
+========================
+
+-> git branch
+   (Lists all local branches in your project; puts an asterisk * next to your current branch)
+
+-> git branch <branch-name>
+   (Creates a brand new branch with that name, but keeps you on your current branch)
+
+-> git checkout <branch-name>
+   (Switches your current workspace over to that specific branch)
+
+-> git checkout -b <branch-name>
+   (Shortcut: Creates a brand new branch AND switches you to it instantly)
+
+-> git branch -m <new-name>
+   (Renames your current active branch to a new name)
+
+-> git branch -v
+   (Lists your branches vertically showing the latest commit message and ID for each)
+
+-> git branch -d <branch-name>
+   (Deletes a branch safely; only works if you have already merged its changes 
+    and deleting branch should not be current or active branch)
+
+-> git merge <branch-name>
+   (Combines the changes from that specific branch into your current active branch)
+
+-> git diff
+   (Shows the exact line-by-line differences between your current unsaved changes and your last commit)
