@@ -76,14 +76,9 @@ GIT BASIC COMMANDS:
 -> git remote add origin <URL>
    (Links your local Git repository to your remote repository on GitHub using the nickname "origin")
 
--> git branch
-   (Lists all the branches in your local repository and highlights the one you are currently on)
-
--> git branch -m <new-name>
-   (Renames your current active branch to a new name, like renaming "master" to "main")
-
--> git branch -v
-   (Lists your local branches vertically showing the latest commit message and ID for each)
+-> git pull --rebase origin <branch-name>
+   (Downloads the latest changes from GitHub AND replays your local commits 
+    on top of them, keeping a clean, linear project history without extra merge commits)
 
 -> git push -u origin main
    (Uploads commits to GitHub AND sets "main" as your default tracking branch for future shortcuts)
@@ -134,3 +129,37 @@ Github repo
 
 -> git diff
    (Shows the exact line-by-line differences between your current unsaved changes and your last commit)
+
+=========================
+GITHUB WEBSITE FEATURES :
+=========================
+-> Pull Request (PR)
+   (A GitHub website feature used to ask permission to merge your branch into the main project)
+
+-> Fork (Github Feature)
+   (Creates an identical, personal copy of someone else's GitHub repository under your own account)
+
+=====================
+ GIT RESET COMMANDS :
+=====================
+-> git reset <file-name>
+   (Unstages a specific file, moving it out of the green preparation area without altering any text inside it)
+
+-> git reset HEAD <file>
+   (Unstages a specific file, taking it out of the green preparation area without touching your code text)
+
+-> git reset HEAD~1
+   (Undoes your very last commit, dropping those changes back into your staging area so you can re-commit)
+
+-> git reset <commit-hash>
+   (Default/Mixed: Rewinds history back to a specific past commit hash; unstages your newer edits but keeps your code text)
+
+-> git reset --soft <commit-hash>
+   (Rewinds history back to a specific commit hash but keeps ALL your subsequent code changes staged and ready)
+
+-> git reset --hard <commit-hash>
+   ( DESTRUCTIVE: Rewinds history back to a specific commit hash AND permanently deletes all code written after it)
+
+-> git reset --hard
+   ( DESTRUCTIVE: Forcefully wipes away all current unsaved edits, resetting files back to the exact state of your last commit)
+
